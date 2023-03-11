@@ -1,0 +1,332 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Benim-Listem</title>
+	<title>Automatic Popup</title>
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!--Stylesheets-->
+    <style media="screen">
+      *,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(236, 224, 224);
+}
+.popup{
+    background-color: rgb(76, 175, 80);
+    width: 420px;
+    padding: 30px 40px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 8px;
+    font-family: "Poppins",sans-serif;
+    display: none; 
+    text-align: center;
+}
+.popup button{
+    display: block;
+    margin:  0 0 20px auto;
+    background-color: transparent;
+    font-size: 30px;
+    color: #ffffff;
+    background: rgb(25, 115, 207);
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.popup h2{
+  margin-top: -20px;
+}
+.popup p{
+    font-size: 14px;
+    text-align: justify;
+    margin: 20px 0;
+    line-height: 25px;
+}
+    </style>
+<!--Menü-->
+    
+<style type="text/css">
+nav {
+	margin: 27px auto 0;
+ 
+	position: relative;
+	width: 310px;
+	height: 50px;
+	background-color: #34495e;
+	
+	font-size: 0;
+}
+nav a {
+	line-height: 50px;
+	height: 100%;
+	font-size: 15px;
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
+	color: white;
+	cursor: pointer;
+}
+nav .animation {
+	position: absolute;
+	height: 100%;
+	top: 0;
+	z-index: 0;
+	transition: all .5s ease 0s;
+}
+a:nth-child(1) {
+	width: 100px;
+}
+a:nth-child(2) {
+	width: 110px;
+}
+a:nth-child(3) {
+	width: 100px;
+}
+a:nth-child(4) {
+	width: 160px;
+}
+a:nth-child(5) {
+	width: 120px;
+}
+nav .start-home, a:nth-child(1):hover~.animation {
+	width: 100px;
+	left: 0;
+	background-color: #1abc9c;
+}
+nav .start-about, a:nth-child(2):hover~.animation {
+	width: 110px;
+	left: 100px;
+	background-color: #e74c3c;
+}
+nav .start-blog, a:nth-child(3):hover~.animation {
+	width: 100px;
+	left: 210px;
+	background-color: #3498db;
+}
+nav .start-portefolio, a:nth-child(4):hover~.animation {
+	width: 160px;
+	left: 310px;
+	background-color: #9b59b6;
+}
+nav .start-contact, a:nth-child(5):hover~.animation {
+	width: 120px;
+	left: 470px;
+	background-color: #e67e22;
+}
+ 
+body {
+	font-size: 12px;
+	font-family: 'Cherry Swash', cursive;
+	background: rgb(25, 115, 207)	;
+}
+h1 {
+	text-align: center;
+	margin: 40px 0 40px;
+	text-align: center;
+	font-size: 30px;
+	color: #ecf0f1;
+	text-shadow: 2px 2px 4px #000000;
+	font-family: 'Cherry Swash', cursive;
+}
+h2 {
+	text-align: center;
+	margin: 40px 0 40px;
+	text-align: center;
+	font-size: 30px;
+	color: #ecf0f1;
+	text-shadow: 2px 2px 4px #000000;
+	font-family: 'Cherry Swash', cursive;
+}
+ 
+p {
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    color: #ecf0f1;
+    font-family: 'Cherry Swash',cursive;
+    font-size: 16px;
+}
+ 
+span {
+    color: #2BD6B4;
+}
+</style>
+</head>
+<body>
+	<div class="popup">
+        <button id="close">&times;</button>
+        <h2>Kişisel Diyet Listesi.</h2>
+        <p>
+            Burada olmayan bir hastalığınız mı var? Dr.Talha Dağ'dan kişiye özel liste almak için aşağıdaki linke tıklayınız.
+        </p>
+        <a href="tel:05469999977" style="color: rgb(236, 224, 224);">Buraya Tıklayın.</a>
+    </div>
+    <!--Script-->
+    <script type="text/javascript">
+window.addEventListener("load", function(){
+    setTimeout(
+        function open(event){
+            document.querySelector(".popup").style.display = "block";
+        },
+        2000 
+    )
+});
+
+
+document.querySelector("#close").addEventListener("click", function(){
+    document.querySelector(".popup").style.display = "none";
+});
+    </script>
+
+    <nav>
+        <a href="Anasayfa.html">Anasayfa</a>
+        <a href="hakkımızda.html">Hakkımızda</a>
+        <a href="iletisim.html">İletişim</a>
+        <div class="animation start-home"></div>
+    </nav>
+	<span style="color:rgb(236, 224, 224)">
+		<center>
+			<h1 size="7" style="color: rgb(76, 175, 80);" > <b><i>Listeme Uyuyorum Sağlığımı Koruyorum.</i></b></h1>
+		</center>
+		<p>İnsanlar her gün çeşitli hastalıklarla savaşıyor bunları yenmek için farklı farklı mücadeleler veriliyorlar. Bu hastalıkların büyük kısmı da aslında düzgün bir beslenme planı ile daha kolay atlatılabiliyor ve beslenme listeleri hayatı insanlara daha da kolaylaştırıyor. Listelerin amacı hastanın günlük alması gereken enerji ve besin öğelerinin hastaya yeterli ve dengeli bir şekilde verilmesini sağlamaktır. Tabii ki bu listeler oluşturulurken de tüketilen besinlerin insanların üzerinde göstereceği komplikasyonlar düşünülerek donanımlı bir uzman tarafından hazırlanması gerektiğini hepimiz biliyoruz. Peki ya beslenme listelerinin kaçına gerçekten güvenebiliriz ? İşte Benim Listem ailesi olarak burada devreye giriyoruz. Bu alandaki en iyi okullardan mezun , birçok hasta görmüş , yaptığı listeleri kendi özel tarifleriyle de süsleyen alanınında uzman , Dr.Talha Dağ'ın özel olarak incelediği hastalıklara özel beslenme listelerini sizin için bir araya getirdik. Sizi ilgilendiren hastalığın altındaki linke tıklayarak listeye ulaşabilir ayrıca  
+			<a href="hakkımızda.html" style="color:rgb(236, 224, 224)">Dr.Talha Dağ</a>'ın biyografisine sitemizin Hakkımızda kısmından ulaşıp inceleyebilirsiniz. Sağlıklı günler diliyor, listeme uyuyor sağlığımı koruyorum</p>
+		
+		<i>
+			<ol style="margin-left: 20px;">
+				<li> <a href="#hiper" style="color:rgb(236, 224, 224)"> <b>Hipertansiyon Hastaları İçin Diyet Listesi</b></a> </li>
+				<br>
+				<li> <a href="#diyabet" style="color:rgb(236, 224, 224)"> <b>Diyabet - Şeker Hastaları İçin Diyet Listeleri</b></a> </li>
+				<br>
+				<li> <a href="#kalp" style="color:rgb(236, 224, 224)"> <b>Kalp - Damar Hastalıkları İçin Diyet Listeleri</b></a> </li>
+				<br>
+				<li> <a href="#böbrek" style="color:rgb(236, 224, 224)"> <b>Böbrek Hastalıkları İçin Diyet Listeleri</b></a> </li>
+				<br>
+				<li> <a href="#iltihabi" style="color:rgb(236, 224, 224)"> <b>İltihabi böbrek Hastalıkları İçin Diyet Listeleri</b></a> </li>
+				<br>
+				<li> <a href="#gulutensiz" style="color:rgb(236, 224, 224)"> <b>Gulutensiz Diyet Listeleri</b></a> </li>
+				<br>
+				<li> <a href="#kanser" style="color:rgb(236, 224, 224)"> <b>Kanser Hastaları İçin Diyet Listeleri</b></a> </li>
+				<br>
+				<li> <a href="#demans" style="color:rgb(236, 224, 224)"> <b>Demans (Bunama) Ve Alzheimer Hastaları İçin Diyet Listeleri</b></a> </li>
+				<br>
+			</ol>
+			<center>
+				<!--Hipertansiyon-->
+				<h2 size="6" style="color: rgb(76, 175, 80);" id="hiper" > <b><i>Hipertansiyon Hastaları İçin Diyet Listesi</i></b></h2>
+				<br>
+				<br>
+				<a href="png/yeşil diyet.PNG" target="_blank">
+					<img src="png/yeşil diyet.PNG" width="1100" alt="hiper">
+				</a>
+				<br>
+				<br>
+				<a href="https://adiyamanism.saglik.gov.tr/Eklenti/140013/0/ek-3-hipertansiyon-degerlendirme-klavuzupdf.pdf" target="_blank" style="color:rgb(236, 224, 224)"> <b>Hipertansiyon Hastalığı Hakkındaki Detaylı Bilgi İçin Tıklayınız</b></a>
+				<br>
+				<br>
+				<!--Diyabet - Şeker-->
+				<h2 size="6" style="color: rgb(76, 175, 80);" id="diyabet" > <b>Diyabet - Şeker Hastaları İçin Diyet Listeleri</b></h2>
+				<br>
+				<br>
+				<a href="png/yeşil diyet.PNG" target="_blank">
+					<img src="png/yeşil diyet.PNG" width="1100" alt="hiper">
+				</a>
+				<br>
+				<br>
+				<a href="https://adiyamanism.saglik.gov.tr/Eklenti/140014/0/ek-4-diyabet-degerlendirme-klavuzupdf.pdf" target="_blank" style="color:rgb(236, 224, 224)"> <b>Diyabet - Şeker Hastalığı Hakkındaki Detaylı Bilgi İçin Tıklayınız</b></a>
+				<br>
+				<br>
+				<!--Kalp - Damar-->
+				<h2 size="6" style="color: rgb(76, 175, 80);" id="kalp" > <b><i>Kalp - Damar Hastalıkları İçin Diyet Listeleri</i></b></h2>
+				<br>
+				<br>
+				<a href="png/yeşil diyet.PNG" target="_blank">
+					<img src="png/yeşil diyet.PNG" width="1100" alt="hiper">
+				</a>
+				<br>
+				<br>
+				<a href="https://hsgm.saglik.gov.tr/tr/kalp-damar-hastaliklari/liste/kalp-damar-hastaliklari-rehberler.html" target="_blank" style="color:rgb(236, 224, 224)"> <b>Kalp - Damar Hastalıkları Hakkındaki Detaylı Bilgi İçin Tıklayınız</b></a>
+				<br>
+				<br>
+				<!--Böbrek-->
+				<h2 size="6" style="color: rgb(76, 175, 80);" id="böbrek" > <b><i>Böbrek Hastalıkları İçin Diyet Listeleri</i></b></h2>
+				<br>
+				<br>
+				<a href="png/yeşil diyet.PNG" target="_blank">
+					<img src="png/yeşil diyet.PNG" width="1100" alt="hiper">
+				</a>
+				<br>
+				<br>
+				<a href="https://hsgm.saglik.gov.tr/depo/birimler/kronik-hastaliklar-engelli-db/haberler/2021_Egitimler/EK7_Bobrek_Hastaligi_Izlem_Kilavuzu.pdf" target="_blank" style="color:rgb(236, 224, 224)"> <b>Böbrek Hastalıkları Hakkındaki Detaylı Bilgi İçin Tıklayınız</b></a>
+				<br>
+				<br>
+				<!--İltihabi böbrek-->
+				<h2 size="6" style="color: rgb(76, 175, 80);" id="iltihabi" > <b><i>İltihabi böbrek Hastalıkları İçin Diyet Listeleri</i></b></h2>
+				<br>
+				<br>
+				<a href="png/yeşil diyet.PNG" target="_blank">
+					<img src="png/yeşil diyet.PNG" width="1100" alt="hiper">
+				</a>
+				<br>
+				<br>
+				<a href="https://hsgm.saglik.gov.tr/depo/birimler/kronik-hastaliklar-engelli-db/haberler/2021_Egitimler/EK7_Bobrek_Hastaligi_Izlem_Kilavuzu.pdf" target="_blank" style="color:rgb(236, 224, 224)"> <b>İltihabi böbrek Hastalıkları Hakkındaki Detaylı Bilgi İçin Tıklayınız</b></a>
+				<br>
+				<br>
+				<!--Gulutensiz-->
+				<h2 size="6" style="color: rgb(76, 175, 80);" id="gulutensiz" > <b><i>Gulutensiz Diyet Listeleri</i></b></h2>
+				<br>
+				<br>
+				<a href="png/yeşil diyet.PNG" target="_blank">
+					<img src="png/yeşil diyet.PNG" width="1100" alt="hiper">
+				</a>
+				<br>
+				<br>
+				<a href="https://www.saglik.gov.tr/TR,53084/colyak-rehberi-yayinlandi.html" target="_blank" style="color:rgb(236, 224, 224)"> <b>Guluten Hastalığının Detayları</b></a>
+				<br>
+				<br>
+				<!--Kanser-->
+				<h2 size="6" style="color: rgb(76, 175, 80);" id="kanser" > <b><i>Kanser Hastaları İçin Diyet Listeleri</i></b></h2>
+				<br>
+				<br>
+				<a href="png/yeşil diyet.PNG" target="_blank">
+					<img src="png/yeşil diyet.PNG" width="1100" alt="hiper">
+				</a>
+				<br>
+				<br>
+				<a href="https://hsgm.saglik.gov.tr/tr/kanser-anasayfa" target="_blank" style="color:rgb(236, 224, 224)"> <b>Kanser Hastalığı Hakkındaki Detaylı Bilgi İçin Tıklayınız</b></a>
+				<br>
+				<br>
+				<!--Demans (Bunama) Ve Alzheimer-->
+				<h2 size="6" style="color: rgb(76, 175, 80);" id="demans" > <b><i>Demans (Bunama) Ve Alzheimer Hastaları İçin Diyet Listeleri</i></b></h2>
+				<br>
+				<br>
+				<a href="png/yeşil diyet.PNG" target="_blank">
+					<img src="png/yeşil diyet.PNG" width="1100" alt="hiper">
+				</a>
+				<br>
+				<br>
+				<a href="https://shgm.saglik.gov.tr/TR-73671/alzheimer-ve-diger-demans-hastaliklari-klinik-protokolu.html" target="_blank" style="color:rgb(236, 224, 224)"> <b>Demans (Bunama) Ve Alzheimer Hastalıkları Hakkındaki Detaylı Bilgi İçin Tıklayınız</b></a>
+				<br>
+				<br>
+			</center>
+		</i>
+	</span>
+</body>
+</html>
